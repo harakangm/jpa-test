@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Member {
-	//엔티티 클래스
+	//엔티티 클래스 = MVC 에서 DO
 	//필드값이 db에서 하나의 컬럼값이됨
 	//어노테이션 컬럼은 하나의 컬럼 이름을 지정해주면 이름대로 컬럼이 생성
 	//enum 타입을 이용하면 반드시 @Enumerated을 붙여줘야함
@@ -19,6 +19,7 @@ public class Member {
 	
 	@Id
 	@Column(name="member_id")
+	//컬럼값을 알아서 넣어준다?? 시퀀스?
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
